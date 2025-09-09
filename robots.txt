@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# 소스/개발용 파일은 크롤 제외(선택)
+Disallow: /drafts/
+Disallow: /private/
+Disallow: /assets/src/
+Disallow: /*.map$
+
+# 사이트맵: 실제 경로로 변경
+Sitemap: https://develckm86.github.io/codingclass/sitemap.xml
+# 커스텀 도메인을 쓰면 함께 명시해도 됩니다.
+#Sitemap: https://yourdomain.com/sitemap.xml

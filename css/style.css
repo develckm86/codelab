@@ -1,0 +1,36 @@
+/*@import "/node_modules/bootstrap/dist/css/bootstrap.min.css";*/
+@import "bootstrap-custom.css";
+
+body{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-areas:
+    "header header header header header"
+    "aside   main   main   main   main"
+    "footer footer footer footer footer";
+}
+#header{
+  grid-area: header;
+}
+#header>.navbar{
+}
+#aside{
+  grid-area: aside;
+}
+#main {
+  grid-area: main;
+}
+#footer{
+  grid-area: footer;
+}
+@media (max-width: 768px) {
+  body{
+    grid-template-columns: repeat(1,1fr);
+
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+
+  }
+}

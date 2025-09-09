@@ -1,0 +1,40 @@
+/* 1) 메인 팔레트 */
+$primary: #2E6FBE;   // 블루
+$success: #00A78E;   // 민트(Accent)
+$warning: #E6A700;
+$danger:  #D64545;
+$info:    #4C84D4;
+
+/* 2) 테마 맵(선택이지만 권장: 파생 유틸에 확실히 반영) */
+$theme-colors: (
+  "primary": $primary,
+  "success": $success,
+  "warning": $warning,
+  "danger":  $danger,
+  "info":    $info
+);
+
+/* 3) 바탕/텍스트/링크(선택) */
+$body-bg:    #F7F7F9;
+$body-color: #1E1F22;
+$link-color: $primary;
+
+/* 4) 컴포넌트 톤(선택) */
+$btn-border-radius: .75rem;
+$card-border-radius: .75rem;
+
+/* 5) 부트스트랩 본체 로드 (@use + with) */
+@use "../../../src/bootstrap-5.3.7/scss/bootstrap" with (
+  $primary: $primary,
+  $success: $success,
+  $warning: $warning,
+  $danger:  $danger,
+  $info:    $info,
+  $theme-colors: $theme-colors,
+  $body-bg: $body-bg,
+  $body-color: $body-color,
+  $link-color: $link-color,
+  $btn-border-radius: $btn-border-radius,
+  $card-border-radius: $card-border-radius
+);
+//sass --load-path=node_modules css/custom/sass/bootstrap-custom.scss css/bootstrap-custom.css
